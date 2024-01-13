@@ -5,7 +5,7 @@ import Image from "next/image"
 
 function Nav() {
   return (
-    <nav className='flex h-12 px-4 justify-between items-center w-full lg:h-24 lg:px-20'>
+    <nav className=' flex h-12  justify-between items-center w-full lg:h-24 '>
       <Image
         src='/nowStreaming_icon.png'
         width={200}
