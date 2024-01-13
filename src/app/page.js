@@ -1,7 +1,9 @@
-export default function Home() {
+import SuggestMovies from "./(components)/SuggestMovies"
+
+export default async function Home() {
   return (
     <main className='text-white'>
-      <h2>main page</h2>
+      <SuggestMovies />
     </main>
   )
 }
