@@ -17,6 +17,7 @@ module.exports = {
         "c-red": "#ff6347",
         "bg-black": "#003153",
         "c-white": "#f8f8ff",
+        gold: "#ffd700",
       },
     },
   },
