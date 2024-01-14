@@ -1,5 +1,6 @@
 import { airingToday } from "../_utils/requests.js"
 import Image from "next/image"
+import Link from "next/link"
 
 async function SuggestMovies() {
   const movies = await airingToday()
@@ -10,29 +11,31 @@ async function SuggestMovies() {
       <h2>Suggestions</h2>
       <div className='flex flex-wrap gap-1 lg:gap-4'>
         {movies.map((movie) => (
-          <div key={movie.id} className='relative mx-auto px-2'>
-            <Image
-              className='rounded-md w-40 h-52 lg:w-60 lg:h-80'
-              src={`${img_url}${movie.poster_path}`}
-              width={240}
-              height={314}
-              alt={movie.original_title}
-            />
-            <h2
-              id='suggestions_title'
-              className='text-black text-base lg:text-xl font-semibold cursor-pointer'
-            >
-              {movie.original_title.length > 18
-                ? movie.original_title.slice(0, 18) + "..."
-                : movie.original_title}
-            </h2>
-            <h3 className='absolute top-2 left-4 bg-c-red w-fit p-2 rounded-2xl'>
-              {movie.vote_average.toFixed(1)}
-            </h3>
-            <h3 className='bg-c-blue absolute top-2 right-4 p-1 rounded-md'>
-              {movie.original_language}
-            </h3>
-          </div>
+          <Link href={`/${movie.id}`}>
+            <div key={movie.id} className='relative mx-auto px-2'>
+              <Image
+                className='rounded-md w-40 h-52 lg:w-60 lg:h-80'
+                src={`${img_url}${movie.poster_path}`}
+                width={240}
+                height={314}
+                alt={movie.original_title}
+              />
+              <h2
+                id='suggestions_title'
+                className='text-black text-base lg:text-xl font-semibold cursor-pointer'
+              >
+                {movie.original_title.length > 18
+                  ? movie.original_title.slice(0, 18) + "..."
+                  : movie.original_title}
+              </h2>
+              <h3 className='absolute top-2 left-4 bg-c-red w-fit p-2 rounded-2xl'>
+                {movie.vote_average.toFixed(1)}
+              </h3>
+              <h3 className='bg-c-blue absolute top-2 right-4 p-1 rounded-md'>
+                {movie.original_language}
+              </h3>
+            </div>
+          </Link>
         ))}
       </div>
     </section>
