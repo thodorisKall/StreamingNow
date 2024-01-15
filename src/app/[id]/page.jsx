@@ -19,11 +19,8 @@ async function movieDetails({ params }) {
     genres,
   } = details
 
-  // const backgroundStyle = {
-  //   backgroundImage: `url(${IMAGE_URL}${backdrop_path})`,
-  // }
   return (
-    <section className='flex bg-cover bg-center mb-24'>
+    <section className='flex bg-cover bg-center mb-24 '>
       <Image
         className='mr-4'
         src={`${IMAGE_URL}${poster_path}`}
@@ -31,7 +28,7 @@ async function movieDetails({ params }) {
         height={450}
         alt={original_title}
       />
-      <div className='flex flex-col justify-around '>
+      <div className='flex flex-col justify-around  h-96'>
         <h2 className='text-4xl font-bold'>{original_title.toUpperCase()}</h2>
         <div className='movieText flex justify-between w-1/2'>
           <h3>
@@ -40,7 +37,7 @@ async function movieDetails({ params }) {
           </h3>
           <h3 className='bg-gold p-1 rounded-lg'>
             <FaImdb />
-            <span>{vote_average.toFixed(1)} </span>
+            <span className='text-black'>{vote_average.toFixed(1)} </span>
           </h3>
           <div className='flex items-center'>
             <MdOutlineLocalMovies />
@@ -49,7 +46,7 @@ async function movieDetails({ params }) {
             ))}
           </div>
         </div>
-        <p className='text-lg'>{overview}</p>
+        <p className='text-lg text-c-white'>{overview}</p>
         <div className='movieID flex justify-between'>
           <button>
             <IoPlay />
