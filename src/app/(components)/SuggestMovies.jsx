@@ -8,13 +8,12 @@ async function SuggestMovies() {
 
   return (
     <section className=''>
-      <h2>Suggestions</h2>
-      <div className='flex flex-wrap gap-1 lg:gap-4'>
+      <div className='flex justify-between flex-wrap '>
         {movies.map((movie) => (
           <Link href={`/${movie.id}`}>
-            <div key={movie.id} className='relative mx-auto px-2'>
+            <div key={movie.id} className='relative mb-8'>
               <Image
-                className='rounded-md w-40 h-52 lg:w-60 lg:h-80'
+                className='rounded-md mb-2 w-40 h-52 lg:w-60 lg:h-80'
                 src={`${img_url}${movie.poster_path}`}
                 width={240}
                 height={314}
@@ -22,7 +21,7 @@ async function SuggestMovies() {
               />
               <h2
                 id='suggestions_title'
-                className='text-black text-base lg:text-xl font-semibold cursor-pointer'
+                className=' text-base lg:text-xl font-semibold cursor-pointer'
               >
                 {movie.original_title.length > 18
                   ? movie.original_title.slice(0, 18) + "..."
