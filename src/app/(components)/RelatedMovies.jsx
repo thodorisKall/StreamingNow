@@ -1,25 +1,29 @@
 import Image from "next/image"
+import Link from "next/link"
 import { relatedMoviesList } from "../_utils/requests"
 
 async function RelatedMovies({ id }) {
   const IMG_URL = process.env.MOVIES_IMAGE_BASE_URL
   const relatedMvs = await relatedMoviesList(id)
-  console.log(relatedMvs)
+
   return (
-    <section className='flex flex-wrap gap-4'>
-      {relatedMvs.map((movie) => (
-        <div>
+    <section className='flex justify-between gap-4 lg:gap-10'>
+      {relatedMvs.slice(0, 5).map((movie) => (
+        <Link href={`/${movie.id}`} key={movie.id} className=''>
           <Image
+            className='w-auto h-96 mb-2'
             src={`${IMG_URL}${movie.poster_path}`}
-            width={194}
-            height={288}
-            alt='Picture of the author'
+            width={258}
+            height={382}
+            alt={movie.original_title}
           />
-          <h2>{movie.original_title}</h2>
-        </div>
+          <h2 className='text-lg font-semibold'>
+            {movie.original_title.length > 18
+              ? movie.original_title.slice(0, 18).toUpperCase() + "..."
+              : movie.original_title.toUpperCase()}
+          </h2>
+        </Link>
       ))}
-      <h2>Related Movies Component</h2>
-      <h2 className='text-pink-500'>{id}</h2>
     </section>
   )
 }
