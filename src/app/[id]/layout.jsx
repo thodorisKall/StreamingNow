@@ -6,8 +6,8 @@ async function RelatedMoviesLayout({ children, params }) {
   return (
     <>
       {children}
-      <h2>Interna Layout</h2>
-      <h2>{params.id}</h2>
+      <h2 className='text-2xl mb-6 text-c-blue font-bold'>RELATED MOVIES</h2>
+
       <RelatedMovies id={id} />
     </>
   )
