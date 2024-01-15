@@ -13,7 +13,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
   @apply text-c-white;
 }
 
@@ -21,20 +22,22 @@ body {
   @apply px-4 lg:px-20;
 }
 
-nav a,
+/* NAV */
+nav ul a,
 nav button,
 #suggestions_title {
   @apply hover:text-c-blue;
 }
 
 .movieText h3 {
-  @apply flex items-center text-slate-700;
+  @apply flex items-center text-grey-t;
 }
 
 .movieText span {
   @apply ml-1;
 }
 
+/* movie ID */
 .movieID button {
   @apply bg-c-blue w-56 h-11 flex items-center justify-center;
 }
@@ -53,4 +56,29 @@ nav button,
 
 .movieID button:hover {
   box-shadow: 300px 0 0 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+/* FOOTER */
+footer h2,
+footer h3,
+footer a {
+  @apply font-semibold text-xl;
+}
+
+.footer__address {
+  @apply flex flex-col;
+}
+
+.footer__icons a {
+  @apply text-3xl;
+}
+
+.footer__icons a:hover {
+  @apply text-c-blue;
+}
+
+.footer__map h2,
+.footer__map h3,
+.footer__map a {
+  @apply mb-2;
 }
