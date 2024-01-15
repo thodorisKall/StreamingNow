@@ -2,12 +2,16 @@ const API_KEY = process.env.MOVIES_API_KEY
 const BASE_URL = process.env.MOVIES_BASE_URL
 
 export const airingToday = async () => {
-  const res = await fetch(`${BASE_URL}movie/popular?api_key=${API_KEY}`, {
-    next: { revalidate: 3600 },
-  })
+  try {
+    const res = await fetch(`${BASE_URL}movie/popular?api_key=${API_KEY}`, {
+      next: { revalidate: 3600 },
+    })
 
-  const data = await res.json()
-  return data.results
+    const data = await res.json()
+    return data.results
+  } catch (err) {
+    console.error(err.message)
+  }
 }
 
 export const movieIdDetails = async (movieId) => {
@@ -24,7 +28,12 @@ export const movieIdDetails = async (movieId) => {
 export const relatedMoviesList = async (movieId) => {
   try {
     const res = await fetch(
-      `${BASE_URL}movie/${movieId}/similar?api_key=${API_KEY}`
+      `${BASE_URL}movie/${movieId}/similar?api_key=${API_KEY}`,
+      {
+        next: {
+          revalidate: 20500,
+        },
+      }
     )
     const data = await res.json()
     return data.results
