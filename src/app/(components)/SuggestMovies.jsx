@@ -27,11 +27,11 @@ async function SuggestMovies() {
                   ? movie.original_title.slice(0, 18) + "..."
                   : movie.original_title}
               </h2>
-              <h3 className='absolute top-2 left-4 bg-c-red w-fit p-2 rounded-2xl'>
+              <h3 className='absolute top-2 left-4 bg-c-red w-fit p-2 rounded-full'>
                 {movie.vote_average.toFixed(1)}
               </h3>
-              <h3 className='bg-c-blue absolute top-2 right-4 p-1 rounded-md'>
-                {movie.original_language}
+              <h3 className='bg-c-blue absolute top-2 right-4 p-1 px-2  rounded-md'>
+                {movie.original_language.toUpperCase()}
               </h3>
             </div>
           </Link>
