@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         "c-blue": "#1e90ff",
         "c-red": "#ff6347",
-        "bg-black": "#003153",
+        "g-black": "#272829",
         "c-white": "#f8f8ff",
         gold: "#ffd700",
       },
