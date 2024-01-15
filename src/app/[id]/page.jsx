@@ -23,7 +23,7 @@ async function movieDetails({ params }) {
   //   backgroundImage: `url(${IMAGE_URL}${backdrop_path})`,
   // }
   return (
-    <section className='flex bg-cover bg-center '>
+    <section className='flex bg-cover bg-center mb-24'>
       <Image
         className='mr-4'
         src={`${IMAGE_URL}${poster_path}`}
