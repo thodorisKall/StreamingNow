@@ -20,10 +20,17 @@ function Nav() {
         <Link href={"/"}>TV Shows</Link>
         <Link href={"/"}>On Air</Link>
       </ul>
-      <div className='text-2xl w-24 flex justify-between'>
-        <button>
-          <IoIosSearch />
-        </button>
+      <div className='text-2xl  flex justify-between'>
+        <form className='flex'>
+          <input
+            type='search'
+            placeholder='Search '
+            className='bg-light_black py-0.5 px-2 w-1/ mr-2 text-xl text-grey-t'
+          />
+          <button type='submit'>
+            <IoIosSearch />
+          </button>
+        </form>
         <button>
           <IoSunnyOutline />
         </button>
