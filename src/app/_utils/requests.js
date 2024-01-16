@@ -41,3 +41,15 @@ export const relatedMoviesList = async (movieId) => {
     console.log(err.message)
   }
 }
+
+export const searchMovies = async (term) => {
+  try {
+    const res = await fetch(
+      `${BASE_URL}search/movie?api_key=${API_KEY}&query=${term}`
+    )
+    const data = await res.json()
+    return data.results
+  } catch (err) {
+    console.log(err.message)
+  }
+}
