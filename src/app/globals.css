@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 h1,
@@ -16,10 +17,6 @@ h5,
 h6,
 a {
   @apply text-c-white;
-}
-
-body {
-  @apply px-4 lg:px-20;
 }
 
 /* NAV */
@@ -63,6 +60,10 @@ footer h2,
 footer h3,
 footer a {
   @apply font-semibold text-xl;
+}
+
+.movieDesc {
+  @apply lg:min-w-[1000px];
 }
 
 .footer__address {
