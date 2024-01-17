@@ -28,19 +28,19 @@ async function movieDetails({ params }) {
         height={450}
         alt={original_title}
       />
-      <div className='flex flex-col justify-around  h-96'>
+      <div className='movieDesc flex flex-col justify-around  h-96'>
         <h2 className='text-4xl font-bold'>{original_title.toUpperCase()}</h2>
         <div className='movieText flex justify-between w-1/2'>
           <h3>
             <IoTimeOutline />
             <span>{runtime}'</span>
           </h3>
-          <h3 className='bg-gold p-1 rounded-lg'>
-            <FaImdb />
+          <h3 className='bg-gold p-1 rounded-lg '>
+            <FaImdb className='text-black' />
             <span className='text-black'>{vote_average.toFixed(1)} </span>
           </h3>
           <div className='flex items-center'>
-            <MdOutlineLocalMovies />
+            <MdOutlineLocalMovies className='text-c-blue' />
             {genres.map((gen) => (
               <h3 key={gen.id}>{gen.name + ",  "}</h3>
             ))}
