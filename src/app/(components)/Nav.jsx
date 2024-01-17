@@ -1,12 +1,24 @@
+"use client"
+import { useState } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
+
 import { IoIosSearch } from "react-icons/io"
 import { IoMoonOutlin, IoSunnyOutline } from "react-icons/io5"
 
 import Image from "next/image"
 
 function Nav() {
+  const [searchText, setSearchText] = useState("")
+  const router = useRouter()
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    router.push(`/search/${searchText}`)
+    console.log("HERE")
+  }
+
   return (
-    <nav className='flex h-12 justify-between items-center w-full lg:h-24 mb-4'>
+    <nav className='flex h-12 justify-between items-center w-full lg:h-24 mb-4 '>
       <Image
         src='/nowStreaming_icon.png'
         width={200}
@@ -21,19 +33,20 @@ function Nav() {
         <Link href={"/"}>On Air</Link>
       </ul>
       <div className='text-2xl  flex justify-between'>
-        <form className='flex'>
+        <form className='flex' onSubmit={handleSubmit}>
           <input
+            onChange={(e) => setSearchText(e.target.value)}
             type='search'
             placeholder='Search '
-            className='bg-light_black py-0.5 px-2 w-1/ mr-2 text-xl text-grey-t'
+            className='bg-light_black py-0.5 px-2 w-1/ mr-2 text-xl text-grey-t !outline-none'
           />
           <button type='submit'>
             <IoIosSearch />
           </button>
         </form>
-        <button>
+        {/* <button>
           <IoSunnyOutline />
-        </button>
+        </button> */}
       </div>
     </nav>
   )
