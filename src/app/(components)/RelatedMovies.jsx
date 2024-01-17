@@ -9,7 +9,7 @@ async function RelatedMovies({ id }) {
   return (
     <section className='flex justify-between gap-4 lg:gap-10'>
       {relatedMvs.slice(0, 5).map((movie) => (
-        <Link href={`/${movie.id}`} key={movie.id} className=''>
+        <Link href={`/${movie.id}`} key={movie.id} className='relative'>
           <Image
             className='w-auto h-96 mb-2'
             src={`${IMG_URL}${movie.poster_path}`}
@@ -22,6 +22,12 @@ async function RelatedMovies({ id }) {
               ? movie.original_title.slice(0, 18).toUpperCase() + "..."
               : movie.original_title.toUpperCase()}
           </h2>
+          <h3 className='absolute top-2 left-4 bg-c-red w-fit p-2 rounded-full'>
+            {movie.vote_average.toFixed(1)}
+          </h3>
+          <h3 className='bg-c-blue absolute top-2 right-4 p-1 px-2  rounded-md'>
+            {movie.original_language.toUpperCase()}
+          </h3>
         </Link>
       ))}
     </section>
