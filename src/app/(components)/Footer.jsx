@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 function Footer() {
   return (
-    <footer className='flex justify-between py-20 '>
+    <footer className=' flex justify-between px-4 lg:px-20  py-16 bg-light_black lg:mt-14'>
       <div className='footer__address'>
         <Image
           className='mb-2'
