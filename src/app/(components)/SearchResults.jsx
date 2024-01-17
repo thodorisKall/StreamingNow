@@ -5,11 +5,12 @@ import Link from "next/link"
 async function SearchResults({ word }) {
   const IMG_URL = process.env.MOVIES_IMAGE_BASE_URL
   const results = await searchMovies(word)
-  console.log(results)
+
   return (
     <section className=''>
       <h2 className='text-3xl mb-8'>
-        {results.length} Results for: "{word}"
+        {results.length} Results for:{" "}
+        <span className='text-c-blue'>"{word}" </span>
       </h2>
       {results.length === 0 ? (
         <>
