@@ -7,6 +7,7 @@ import { IoIosSearch } from "react-icons/io"
 import { IoMoonOutlin, IoSunnyOutline } from "react-icons/io5"
 
 import Image from "next/image"
+//
 
 function Nav() {
   const [searchText, setSearchText] = useState("")
@@ -32,6 +33,7 @@ function Nav() {
         <Link href={"/"}>TV Shows</Link>
         <Link href={"/"}>On Air</Link>
       </ul>
+
       <div className='text-2xl  flex justify-between'>
         <form className='flex' onSubmit={handleSubmit}>
           <input
@@ -45,8 +47,8 @@ function Nav() {
           </button>
         </form>
         {/* <button>
-          <IoSunnyOutline />
-        </button> */}
+        <IoSunnyOutline />
+      </button> */}
       </div>
     </nav>
   )
