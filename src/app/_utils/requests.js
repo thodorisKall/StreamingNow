@@ -1,11 +1,14 @@
 const API_KEY = process.env.MOVIES_API_KEY
 const BASE_URL = process.env.MOVIES_BASE_URL
 
-export const airingToday = async () => {
+export const popular = async () => {
   try {
-    const res = await fetch(`${BASE_URL}movie/popular?api_key=${API_KEY}`, {
-      next: { revalidate: 3600 },
-    })
+    const res = await fetch(
+      `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=${API_KEY}`,
+      {
+        next: { revalidate: 3600 },
+      }
+    )
 
     const data = await res.json()
     return data.results
