@@ -1,6 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import {
+  FaTwitter,
+  FaFacebookF,
+  FaYoutube,
+  FaLocationArrow,
+} from "react-icons/fa"
 
 function Footer() {
   return (
@@ -21,26 +26,44 @@ function Footer() {
 
         <div className='footer__icons flex w-1/2 justify-around '>
           <Link href={"/"}>
-            <FaGithub />
+            <FaTwitter />
           </Link>
           <Link href={"/"}>
-            <FaLinkedin />
+            <FaFacebookF />
+          </Link>
+          <Link href={"/"}>
+            <FaYoutube />
           </Link>
         </div>
       </div>
       <div className='footer__map flex flex-col '>
         <h2 className='font-xl text-c-blue'>SITE MAP</h2>
         <Link href={"/"}>Home</Link>
-        <h3>Search Movie</h3>
+        <Link href={"/"}>Upcoming</Link>
         <Link href={"/"}>TV Shows</Link>
         <Link href={"/"}>On Air</Link>
-        <Link href={"/"}>Thodoris Kallioras</Link>
+        <Link href={"/"}>Top Rated</Link>
       </div>
+      <div className='footer__list flex flex-col '>
+        <h2 className='font-xl text-c-blue'>NowStreaming</h2>
+        <ul>
+          <li>About Us</li>
+          <li>Testimonials</li>
+          <li>Contact Us</li>
+          <li>Terms Of Service</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
       <div className='flex flex-col justify-center'>
-        <h3 className='mb-2'>
-          Delevoped by <span className='text-c-blue'>Thodoris Kallioras</span>
-        </h3>
-        <h2>Website - Portfolio</h2>
+        <h2>Newsletter</h2>
+        <p>Subscribe Our Newsletter To Get Latest Update And News</p>
+        <form>
+          <input type='email' placeholder='Your email' />
+          <button>
+            <FaLocationArrow /> Subscribe Now
+          </button>
+        </form>
       </div>
     </footer>
   )
