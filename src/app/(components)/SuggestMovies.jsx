@@ -1,9 +1,9 @@
-import { airingToday } from "../_utils/requests.js"
+import { popular } from "../_utils/requests.js"
 import Image from "next/image"
 import Link from "next/link"
 
 async function SuggestMovies() {
-  const movies = await airingToday()
+  const movies = await popular()
   const img_url = process.env.MOVIES_IMAGE_BASE_URL
 
   return (
@@ -15,8 +15,9 @@ async function SuggestMovies() {
               <Image
                 className='rounded-md mb-2 w-40 h-52 lg:w-60 lg:h-80'
                 src={`${img_url}${movie.poster_path}`}
-                width={240}
-                height={314}
+                width='0'
+                height='0'
+                sizes='100vw'
                 alt={movie.original_title}
               />
               <h2
