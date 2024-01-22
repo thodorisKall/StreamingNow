@@ -80,6 +80,10 @@ footer a {
 
 .footer__map h2,
 .footer__map h3,
-.footer__map a {
+.footer__map a,
+.footer__list li {
   @apply mb-2;
+}
+.footer__list li {
+  @apply text-c-white font-semibold text-xl;
 }
