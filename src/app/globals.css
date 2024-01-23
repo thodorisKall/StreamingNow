@@ -34,7 +34,16 @@ nav button,
   @apply ml-1;
 }
 
+/* MAIN PAGE */
+.main__page h4 {
+  @apply text-c-blue text-2xl mb-4 font-semibold;
+}
+
 /* movie ID */
+.movieID__container {
+  @apply lg:h-[700px];
+}
+
 .movieID button {
   @apply bg-c-blue w-56 h-11 flex items-center justify-center;
 }
@@ -56,12 +65,17 @@ nav button,
 }
 
 /* FOOTER */
-footer h2,
-footer h3,
-footer a {
-  @apply font-semibold text-xl;
+
+footer h2 {
+  @apply mb-2 text-xl text-c-blue font-semibold;
 }
 
+footer h3,
+footer p,
+footer a,
+footer li {
+  @apply text-c-white;
+}
 .movieDesc {
   @apply lg:min-w-[1000px];
 }
@@ -74,16 +88,11 @@ footer a {
   @apply text-3xl;
 }
 
-.footer__icons a:hover {
+footer a:hover {
   @apply text-c-blue;
 }
 
-.footer__map h2,
-.footer__map h3,
-.footer__map a,
-.footer__list li {
-  @apply mb-2;
-}
-.footer__list li {
-  @apply text-c-white font-semibold text-xl;
+.footer__news input,
+.footer__news button {
+  @apply h-10 p-4;
 }
