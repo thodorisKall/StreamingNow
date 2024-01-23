@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import Nav from "./(components)/Nav"
 import Footer from "./(components)/Footer"
 
@@ -14,7 +15,10 @@ export default function RootLayout({ children }) {
       <body className='bg-g-black'>
         <div className='px-4 lg:px-20'>
           <Nav />
-          <main className='mb-4 '>{children}</main>
+          <main className='mb-4 '>
+            {children}
+            <Analytics />
+          </main>
         </div>
 
         <Footer />
