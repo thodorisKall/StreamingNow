@@ -29,9 +29,9 @@ function Nav() {
       ></Image>
       <ul className='hidden lg:flex justify-between text-2xl w-1/3 cursor-pointer'>
         <Link href={"/"}>Home</Link>
-        <Link href={"/"}>Movies</Link>
-        <Link href={"/"}>TV Shows</Link>
-        <Link href={"/"}>On Air</Link>
+        <Link href={"/topRated"}>Top Rated</Link>
+        <Link href={"/onAir"}>On Air</Link>
+        <Link href={"/upcoming"}>Upcoming</Link>
       </ul>
 
       <div className='text-2xl  flex justify-between'>
