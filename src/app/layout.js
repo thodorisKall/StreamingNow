@@ -19,7 +19,8 @@ export default function RootLayout({ children }) {
 
         <Footer />
         <h3 className=' py-4 pl-4 lg:pl-20 font-semibold'>
-          Developed By <a className='text-c-blue'>Thodoris Kallioras</a>
+          Developed By <a className='text-c-blue'>Thodoris Kallioras </a>&#169;
+          2024
         </h3>
       </body>
     </html>
