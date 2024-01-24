@@ -66,14 +66,16 @@ nav button,
 
 /* FOOTER */
 
-footer h2 {
+footer h2,
+footer label {
   @apply mb-2 text-xl text-c-blue font-semibold;
 }
 
 footer h3,
 footer p,
 footer a,
-footer li {
+footer li,
+footer label {
   @apply text-c-white;
 }
 .movieDesc {
@@ -95,4 +97,27 @@ footer a:hover {
 .footer__news input,
 .footer__news button {
   @apply h-10 p-4;
+}
+
+/*  PLANS CARD */
+
+.plan__box h4,
+.plan__box button {
+  @apply flex items-center;
+}
+
+.plan__box span {
+  @apply text-c-blue;
+}
+
+.plan__box div {
+  @apply lg:py-4;
+}
+
+.plan__box h4 {
+  @apply lg:mb-3;
+}
+
+.plan__box h4 span {
+  @apply lg:mr-2;
 }
