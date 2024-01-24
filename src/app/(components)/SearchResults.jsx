@@ -23,7 +23,7 @@ async function SearchResults({ word }) {
         <div className='grid grid-cols-2 gap-y-10 '>
           {results.map((movie) => (
             <Link href={"/" + movie.id}>
-              <div key={movie.id} className='relative mr-1 w-[800] h-96 '>
+              <div key={movie.id} className='relative mr-4 w-[800] h-96 '>
                 <Image
                   className='relative object-fit w-full h-full opacity-15'
                   src={IMG_URL + movie.backdrop_path}
@@ -32,7 +32,7 @@ async function SearchResults({ word }) {
                   quality={100}
                   alt={movie.original_title}
                 />
-                <div className='absolute top-0 flex flex-col px-2 pt-4'>
+                <div className='absolute top-0 flex flex-col px-4  pt-4'>
                   <h2 className='text-xl mb-1 '>{movie.original_title}</h2>
                   <div className='flex'>
                     <Image
