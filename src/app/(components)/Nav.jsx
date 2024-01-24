@@ -2,11 +2,10 @@
 import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-
+import Image from "next/image"
 import { IoIosSearch } from "react-icons/io"
 import { IoMoonOutlin, IoSunnyOutline } from "react-icons/io5"
 
-import Image from "next/image"
 //
 
 function Nav() {
@@ -15,7 +14,6 @@ function Nav() {
   const handleSubmit = (e) => {
     e.preventDefault()
     router.push(`/search/${searchText}`)
-    console.log("HERE")
   }
 
   return (
@@ -27,7 +25,7 @@ function Nav() {
         alt='now streaming website'
         quality={100}
       ></Image>
-      <ul className='hidden lg:flex justify-between text-2xl w-1/3 cursor-pointer'>
+      <ul className='hidden lg:flex justify-between text-2xl w-1/3 cursor-pointer font-semibold'>
         <Link href={"/"}>Home</Link>
         <Link href={"/topRated"}>Top Rated</Link>
         <Link href={"/onAir"}>On Air</Link>
