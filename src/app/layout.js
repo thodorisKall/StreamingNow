@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/react"
 import Nav from "./(components)/Nav"
 import Footer from "./(components)/Footer"
+import PlansCard from "./(components)/PlansCard"
 
 import "./globals.css"
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
           <Nav />
           <main className='mb-4 '>
             {children}
+            <PlansCard />
             <Analytics />
           </main>
         </div>
