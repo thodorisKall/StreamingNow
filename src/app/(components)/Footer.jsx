@@ -1,13 +1,23 @@
+"use client"
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import {
   FaTwitter,
   FaFacebookF,
   FaYoutube,
   FaLocationArrow,
 } from "react-icons/fa"
+import { IoIosSearch } from "react-icons/io"
 
 function Footer() {
+  const [searchText, setSearchText] = useState("")
+  const router = useRouter()
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    router.push(`/search/${searchText}`)
+  }
   return (
     <footer className=' flex justify-between px-4 lg:px-20  py-16 bg-light_black lg:mt-14'>
       <div className='footer__address'>
@@ -40,10 +50,23 @@ function Footer() {
         <h2>SITE MAP</h2>
         <div className='text-lg font-semibold flex flex-col'>
           <Link href={"/"}>Home</Link>
-          <Link href={"/"}>Upcoming</Link>
-          <Link href={"/"}>TV Shows</Link>
-          <Link href={"/"}>On Air</Link>
-          <Link href={"/"}>Top Rated</Link>
+          <Link href={"/topRated"}>Top Rated</Link>
+          <Link href={"/onAir"}>On Air</Link>
+          <Link href={"/upcoming"}>Upcoming</Link>
+          <form className='flex flex-col' onSubmit={handleSubmit}>
+            <label className=''>Search Movie</label>
+            <div>
+              <input
+                onChange={(e) => setSearchText(e.target.value)}
+                type='search'
+                placeholder='Search '
+                className='bg-light_black rounded-lg tracking-wider py-0.5 px-2 w-48 mr-2 text-xl text-grey-t border border-solid border-c-white'
+              />
+              <button type='submit' className='text-c-white hover:text-c-blue '>
+                <IoIosSearch />
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <div className='footer__list flex flex-col '>
@@ -57,7 +80,7 @@ function Footer() {
         </ul>
       </div>
       <div className='footer__news flex flex-col justify-center'>
-        <h2 className='      '>Newsletter</h2>
+        <h2 className=''>Newsletter</h2>
         <p className='w-72 mb-2'>
           Subscribe Our Newsletter To Get Latest Update And News
         </p>
@@ -65,7 +88,7 @@ function Footer() {
           <input
             type='email'
             placeholder='Your email'
-            className='rounded-lg mb-2'
+            className='rounded-lg  mb-2'
           />
           <button className='rounded-lg bg-c-blue w-72 flex items-center justify-center'>
             <FaLocationArrow className='mr-2 text-c-white' />
