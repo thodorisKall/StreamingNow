@@ -13,7 +13,7 @@ function Plan({
   const pickColor = `${premium ? "c-red" : "c-blue"}`
   return (
     <div
-      className={`plan__box relative border-2 border-solid border-${pickColor} rounded-lg p-4 lg:h-fit lg:w-72`}
+      className={`plan__box relative border-2 border-solid border-${pickColor} rounded-lg p-4 h-[420px] lg:h-fit lg:w-72`}
     >
       <div
         className={`border-b border-solid border-${pickColor} flex flex-col`}
@@ -25,7 +25,7 @@ function Plan({
           <span className='text-5xl'>{price}$</span> /Days
         </h2>
       </div>
-      <div className=''>
+      <div className='h-1/2 flex flex-col justify-between'>
         <h4>
           <span>
             <FaCheckDouble />

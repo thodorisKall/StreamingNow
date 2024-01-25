@@ -3,13 +3,13 @@ import Plan from "./Plan"
 function PlansCard() {
   return (
     <>
-      <div className='plans__title font-semibold flex flex-col items-center justify-center lg:mb-16'>
+      <div className='plans__title font-semibold flex flex-col items-center justify-center text-center mb-12 lg:mb-16'>
         <h5 className='text-lg text-c-blue'>OUR PRICING</h5>
         <h2 className='text-4xl'>
           Choose Your Subscription <span className='text-c-blue'>Plan</span>
         </h2>
       </div>
-      <section className='flex justify-center gap-6'>
+      <section className='flex flex-col lg:flex-row justify-center gap-6'>
         <Plan
           price={25}
           duration={"7"}
