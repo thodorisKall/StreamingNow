@@ -15,28 +15,31 @@ async function SearchResults({ word }) {
       {results.length === 0 ? (
         <>
           <h2>
-            Nothing Found for <span className='text-c-blue'>"{word}"</span>{" "}
+            Nothing Found for <span className='text-c-blue'>"{word}"</span>
           </h2>
           <h3>Try a different Search</h3>
         </>
       ) : (
-        <div className='grid grid-cols-2 gap-y-10 '>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-y-10 lg:gap-x-8'>
           {results.map((movie) => (
             <Link href={"/" + movie.id}>
-              <div key={movie.id} className='relative mr-4 w-[800] h-96 '>
+              <div
+                key={movie.id}
+                className='relative mr-4 h-[550px] w-full lg:w-[800] lg:h-96 overflow-y-scroll lg:overflow-y-hidden'
+              >
                 <Image
-                  className='relative object-fit w-full h-full opacity-15'
+                  className='relative lg:static object-fit w-full h-full opacity-15'
                   src={IMG_URL + movie.backdrop_path}
                   width={200}
                   height={500}
                   quality={100}
                   alt={movie.original_title}
                 />
-                <div className='absolute top-0 flex flex-col px-4  pt-4'>
+                <div className='absolute top-0 flex flex-col px-4 pt-4'>
                   <h2 className='text-xl mb-1 '>{movie.original_title}</h2>
-                  <div className='flex'>
+                  <div className='flex flex-col lg:flex-row'>
                     <Image
-                      className='mr-2 '
+                      className='mr-2 relative'
                       src={IMG_URL + movie.poster_path}
                       width={200}
                       height={500}
@@ -44,7 +47,7 @@ async function SearchResults({ word }) {
                     />
 
                     <div className='py-8'>
-                      <div className='flex justify-around w-1/2 mb-2'>
+                      <div className='flex flex-col justify-around lg:flex-row  h-1/2 lg:h-fit lg:w-1/2 mb-2 absolute lg:static top-12 right-4'>
                         <h3 className='bg-c-blue py-0.5 px-2 rounded-md'>
                           {movie.original_language.toUpperCase()}
                         </h3>
