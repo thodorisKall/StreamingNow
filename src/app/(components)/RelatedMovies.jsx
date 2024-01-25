@@ -7,11 +7,11 @@ async function RelatedMovies({ id }) {
   const relatedMvs = await relatedMoviesList(id)
 
   return (
-    <section className='flex justify-between gap-4 lg:gap-10'>
+    <section className='flex flex-col  lg:flex-row lg:justify-between gap-y-8 mb-16 lg:gap-10'>
       {relatedMvs.slice(0, 5).map((movie) => (
         <Link href={`/${movie.id}`} key={movie.id} className='relative'>
           <Image
-            className='w-auto h-96 mb-2'
+            className='w-full object-fit h-96 mb-2'
             src={`${IMG_URL}${movie.poster_path}`}
             width={258}
             height={382}
