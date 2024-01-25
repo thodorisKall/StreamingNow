@@ -2,11 +2,23 @@ import { MdOutlineSubscriptions } from "react-icons/md"
 import { FaCheckDouble } from "react-icons/fa6"
 import { IoIosArrowRoundForward } from "react-icons/io"
 
-function Plan({ price, duration, type, quality }) {
+function Plan({
+  price,
+  duration,
+  type,
+  quality,
+  subscription,
+  premium = false,
+}) {
+  const pickColor = `${premium ? "c-red" : "c-blue"}`
   return (
-    <div className='plan__box border-2 border-solid border-c-blue rounded-lg p-4 lg:h-fit lg:w-72'>
-      <div className='border-b border-solid border-c-blue flex flex-col'>
-        <h3 className='self-center text-c-blue text-4xl  mb-4 '>
+    <div
+      className={`plan__box relative border-2 border-solid border-${pickColor} rounded-lg p-4 lg:h-fit lg:w-72`}
+    >
+      <div
+        className={`border-b border-solid border-${pickColor} flex flex-col`}
+      >
+        <h3 className={`self-center text-${pickColor} text-4xl  mb-4 `}>
           <MdOutlineSubscriptions />
         </h3>
         <h2>
@@ -45,8 +57,17 @@ function Plan({ price, duration, type, quality }) {
           24/7 Support
         </h4>
       </div>
+
+      <h4
+        className={`subscription bg-${pickColor} w-fit h-8 px-10 rounded-md font-semibold flex justify-center mx-auto absolute top-[-16px] left-0`}
+      >
+        {subscription}
+      </h4>
+
       <div className='flex justify-center'>
-        <button className='bg-c-blue text-c-white rounded-md py-1 flex justify-center w-full lg:h-11'>
+        <button
+          className={`bg-${pickColor} text-c-white rounded-md py-1 flex justify-center w-full lg:h-11`}
+        >
           CHOOSE PLAN
           <p className='text-c-white ml-2'>
             <IoIosArrowRoundForward />
