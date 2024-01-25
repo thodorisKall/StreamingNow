@@ -17,13 +17,14 @@ function Nav() {
   }
 
   return (
-    <nav className='flex h-12 justify-between items-center w-full lg:h-24 mb-4 '>
+    <nav className='flex flex-col lg:flex-row justify-between items-center w-full h-fit lg:h-24 mb-4 '>
       <Image
         src='/nowStreaming_icon.png'
         width={200}
         height={50}
         alt='now streaming website'
         quality={100}
+        className='mb-4'
       ></Image>
       <ul className='hidden lg:flex justify-between text-2xl w-1/3 cursor-pointer font-semibold'>
         <Link href={"/"}>Home</Link>
@@ -37,8 +38,8 @@ function Nav() {
           <input
             onChange={(e) => setSearchText(e.target.value)}
             type='search'
-            placeholder='Search '
-            className='bg-light_black py-0.5 px-2 w-1/ mr-2 text-xl text-grey-t !outline-none'
+            placeholder='Search Movie'
+            className='bg-light_black py-0.5 px-2 w-1/ mr-2 text-xl text-grey-t !outline-none rounded-md'
           />
           <button type='submit'>
             <IoIosSearch />
