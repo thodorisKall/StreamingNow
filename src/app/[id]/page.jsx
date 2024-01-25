@@ -20,7 +20,7 @@ async function movieDetails({ params }) {
   } = details
 
   return (
-    <section className='movieID__container relative mb-16'>
+    <section className='movieID__container flex flex-col items-center relative mb-16 h-[1050px] '>
       <Image
         className='relative object-fit w-full h-full opacity-10'
         src={`${IMAGE_URL}${backdrop_path || poster_path}`}
@@ -30,26 +30,28 @@ async function movieDetails({ params }) {
         quality={100}
       />
 
-      <div className='flex bg-cover bg-center mb-24 absolute top-10 px-10'>
+      <div className='flex flex-col lg:flex-row bg-cover bg-center  mb-24 absolute top-10 left-2 px-4 lg:px-10'>
         <Image
-          className='mr-4'
+          className='w-96 lg:w-11/12 h-full lg:h-[570px] mb-4 lg:mr-4'
           src={`${IMAGE_URL}${poster_path}`}
           width={305}
           height={450}
           alt={original_title}
         />
-        <div className='movieDesc flex flex-col justify-around  '>
-          <h2 className='text-4xl font-bold'>{original_title.toUpperCase()}</h2>
-          <div className='movieText flex justify-between w-1/2'>
-            <h3>
+        <div className='movieDesc flex flex-col justify-around  w-11/12'>
+          <h2 className='text-4xl font-bold mb-4 lg:mb-0'>
+            {original_title.toUpperCase()}
+          </h2>
+          <div className='movieText flex justify-between mb-4 lg:mb-0 w-full lg:w-1/2 '>
+            <h3 className='mr-4 lg:mr-0'>
               <IoTimeOutline />
               <span>{runtime}'</span>
             </h3>
-            <h3 className='bg-gold p-1 rounded-lg '>
+            <h3 className='bg-gold p-1 rounded-lg mr-4 lg:mr-0'>
               <FaImdb className='text-black' />
               <span className='text-black'>{vote_average.toFixed(1)} </span>
             </h3>
-            <div className='flex items-center'>
+            <div className='flex items-center '>
               <MdOutlineLocalMovies className='text-c-blue' />
               {genres.map((gen) => (
                 <h3 key={gen.id}>{gen.name + ",  "}</h3>
@@ -57,7 +59,7 @@ async function movieDetails({ params }) {
             </div>
           </div>
           <p className='text-lg text-c-white'>{overview}</p>
-          <div className='movieID flex justify-between'>
+          <div className='movieID flex flex-wrap w-full p-2 h-fit gap-y-10 justify-between '>
             <button>
               <IoPlay />
               <h3>Play</h3>
