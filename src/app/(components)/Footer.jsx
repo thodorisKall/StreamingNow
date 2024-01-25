@@ -19,22 +19,22 @@ function Footer() {
     router.push(`/search/${searchText}`)
   }
   return (
-    <footer className=' flex justify-between px-4 lg:px-20  py-16 bg-light_black lg:mt-14'>
+    <footer className='flex flex-col  lg:flex-row  lg:justify-between px-4 lg:px-20  py-16 bg-light_black lg:mt-14'>
       <div className='footer__address'>
         <Image
-          className='mb-2'
+          className='mb-2 '
           src='/nowStreaming_icon.png'
           width={200}
           height={50}
           alt='now streaming website'
           quality={100}
         />
-        <div className='mb-8'>
+        <div className='mb-4 lg:mb-8'>
           <h3>West Attica</h3>
           <h3>Athens, GR</h3>
         </div>
 
-        <div className='footer__icons flex w-1/2 justify-around '>
+        <div className='footer__icons flex w-1/2 lg:justify-around '>
           <Link href={"/"}>
             <FaTwitter />
           </Link>
@@ -69,7 +69,7 @@ function Footer() {
           </form>
         </div>
       </div>
-      <div className='footer__list flex flex-col '>
+      <div className='flex flex-col '>
         <h2>NowStreaming</h2>
         <ul className='text-lg font-semibold'>
           <li>About Us</li>
@@ -80,7 +80,7 @@ function Footer() {
         </ul>
       </div>
       <div className='footer__news flex flex-col justify-center'>
-        <h2 className=''>Newsletter</h2>
+        <h2>Newsletter</h2>
         <p className='w-72 mb-2'>
           Subscribe Our Newsletter To Get Latest Update And News
         </p>
@@ -90,7 +90,7 @@ function Footer() {
             placeholder='Your email'
             className='rounded-lg  mb-2'
           />
-          <button className='rounded-lg bg-c-blue w-72 flex items-center justify-center'>
+          <button className='rounded-lg bg-c-blue w-full lg:w-72 flex items-center justify-center'>
             <FaLocationArrow className='mr-2 text-c-white' />
             <h3>Subscribe Now</h3>
           </button>
