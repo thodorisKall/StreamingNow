@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# StreamingNow
 
-## Getting Started
+## 1. Goal of the Project
 
-First, run the development server:
+The goal of this project is to practice and implement the latest features of the newest version of Next.js. The focus areas include utilizing server and client components, implementing nested layouts, managing metadata, incorporating dynamic routing, creating nested routes, organizing private folders, and using Links. The project aims to showcase popular movies, TV shows, on-air movies, and top-rated movies. Users can search for specific movies to view details, click on any movie to see more information, and discover related movies based on their choices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 2. Site URL
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The live version of the website can be accessed at [streamingnow.site](https://streamingnow.site).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 3. Description
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The website provides information about popular movies, TV shows, on-air movies, and top-rated movies. Users can utilize the search functionality to find details about specific movies. Clicking on a movie title leads to a dedicated page with comprehensive details, including related movie recommendations.
 
-## Learn More
+## 4. Outcome
 
-To learn more about Next.js, take a look at the following resources:
+The current version of the project successfully implements the specified features, showcasing the latest capabilities of Next.js. Users can interact with the website to explore and find information about their favorite movies and TV shows.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 5. Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The project is built using the following technologies:
 
-## Deploy on Vercel
+- Tailwind
+- Next.js
+- React
+- JavaScript
+- CSS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 6. Vision
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The vision for the project is to enhance the layout, incorporating a carousel at the top of the Home page for a visually appealing user experience. Additionally, an advanced search feature will be added, allowing users to search based on actors and the year of production. These enhancements aim to elevate the user's ability to discover content on the platform.
+
+## 7. Stage of the Project
+
+The project is currently in progress...
+The focus is on further improving the layout, introducing a carousel, and implementing advanced search functionality.
