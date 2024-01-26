@@ -17,7 +17,7 @@ function Nav() {
   }
 
   return (
-    <nav className='flex flex-col lg:flex-row justify-between items-center w-full h-fit lg:h-24 mb-4 '>
+    <nav className='flex flex-col lg:flex-row justify-between items-center w-full h-fit lg:h-24 mb-4 mt-4 lg:mt-0 '>
       <Image
         src='/nowStreaming_icon.png'
         width={200}
