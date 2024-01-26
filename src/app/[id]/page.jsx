@@ -20,7 +20,7 @@ async function movieDetails({ params }) {
   } = details
 
   return (
-    <section className='movieID__container flex flex-col items-center relative mb-16 h-[1050px] '>
+    <section className='movieID__container flex flex-col items-center relative mb-16 h-[1150px] overflow-x-scroll lg:overflow-hidden lg:h-[700px] '>
       <Image
         className='relative object-fit w-full h-full opacity-10'
         src={`${IMAGE_URL}${backdrop_path || poster_path}`}
@@ -58,8 +58,8 @@ async function movieDetails({ params }) {
               ))}
             </div>
           </div>
-          <p className='text-lg text-c-white'>{overview}</p>
-          <div className='movieID flex flex-wrap w-full p-2 h-fit gap-y-10 justify-between '>
+          <p className='text-lg mb-9 lg:mb-0 text-c-white'>{overview}</p>
+          <div className='movieID grid grid-cols-2 gap-x-4 lg:flex  w-full p-2 h-fit gap-y-10 justify-between '>
             <button>
               <IoPlay />
               <h3>Play</h3>
