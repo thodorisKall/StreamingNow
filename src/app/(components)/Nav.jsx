@@ -4,8 +4,8 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { IoIosSearch } from "react-icons/io"
-import { IoMoonOutlin, IoSunnyOutline } from "react-icons/io5"
-
+import { IoMoonOutlin, IoSunnyOutline, IoCloseSharp } from "react-icons/io5"
+import { FaBars } from "react-icons/fa6"
 //
 
 function Nav() {
