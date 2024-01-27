@@ -30,9 +30,9 @@ async function movieDetails({ params }) {
         quality={100}
       />
 
-      <div className='flex flex-col lg:flex-row bg-cover bg-center  mb-24 absolute top-10 left-2 px-4 lg:px-10'>
+      <div className='flex flex-col lg:flex-row bg-cover bg-center mb-24 absolute top-10 left-2 px-4 lg:px-10'>
         <Image
-          className='w-96 lg:w-11/12 h-full lg:h-[570px] mb-4 lg:mr-4'
+          className='mb-4 w-96 h-auto lg:w-[455px] lg:mr-4'
           src={`${IMAGE_URL}${poster_path}`}
           width={305}
           height={450}
@@ -59,7 +59,7 @@ async function movieDetails({ params }) {
             </div>
           </div>
           <p className='text-lg mb-9 lg:mb-0 text-c-white'>{overview}</p>
-          <div className='movieID grid grid-cols-2 gap-x-4 lg:flex  w-full p-2 h-fit gap-y-10 justify-between '>
+          <div className='movieID grid grid-cols-2 gap-x-4 lg:flex w-full py-2 h-fit gap-y-10 justify-between '>
             <button>
               <IoPlay />
               <h3>Play</h3>
