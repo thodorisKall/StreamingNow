@@ -7,7 +7,7 @@ async function PopularMovies({ fetch_func }) {
 
   return (
     <section className='mb-8'>
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6  '>
+      <div className='grid grid-cols-2 gap-x-2 md:grid-cols-3 lg:grid-cols-6  '>
         {movies.slice(0, 12).map((movie) => (
           <Link href={`/${movie.id}`}>
             <div key={movie.id} className=' mb-8  mr-2 lg:w-60'>
