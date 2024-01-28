@@ -34,6 +34,10 @@ nav button,
   @apply ml-1;
 }
 
+.nav__sm a {
+  @apply mb-4 pb-2 border-b border-grey-t;
+}
+
 /* MAIN PAGE */
 .main__page h4 {
   @apply text-c-blue text-2xl mb-4 font-semibold;
