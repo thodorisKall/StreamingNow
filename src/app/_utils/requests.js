@@ -103,7 +103,7 @@ export const movieIdDetails = async (movieId) => {
 export const relatedMoviesList = async (movieId) => {
   try {
     const res = await fetch(
-      `${BASE_URL}movie/${movieId}/similar?api_key=${API_KEY}`,
+      `${BASE_URL}movie/${movieId}/recommendations?api_key=${API_KEY}`,
       {
         next: {
           revalidate: 20500,
