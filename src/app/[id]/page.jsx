@@ -45,7 +45,7 @@ async function movieDetails({ params }) {
           <div className='movieText flex justify-between mb-4 lg:mb-0 w-full lg:w-1/2 '>
             <h3 className='mr-4 lg:mr-0'>
               <IoTimeOutline />
-              <span>{runtime}'</span>
+              <span>{runtime}&apos;</span>
             </h3>
             <h3 className='bg-gold p-1 rounded-lg mr-4 lg:mr-0'>
               <FaImdb className='text-black' />
