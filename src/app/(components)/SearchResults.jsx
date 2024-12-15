@@ -10,12 +10,13 @@ async function SearchResults({ word }) {
     <section className=''>
       <h2 className='text-3xl mb-8'>
         {results.length} Results for:{" "}
-        <span className='text-c-blue'>"{word}" </span>
+        <span className='text-c-blue'>&quot;{word}&quot;</span>
       </h2>
       {results.length === 0 ? (
         <>
           <h2>
-            Nothing Found for <span className='text-c-blue'>"{word}"</span>
+            Nothing Found for{" "}
+            <span className='text-c-blue'>&quot;{word}&quot;</span>
           </h2>
           <h3>Try a different Search</h3>
         </>
