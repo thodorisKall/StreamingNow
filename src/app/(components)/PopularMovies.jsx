@@ -9,8 +9,8 @@ async function PopularMovies({ fetch_func }) {
     <section className='mb-8'>
       <div className='grid grid-cols-2 gap-y-6 gap-x-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-20 lg:gap-y-10'>
         {movies.slice(0, 12).map((movie) => (
-          <Link href={`/${movie.id}`}>
-            <div key={movie.id} className='w-fit'>
+          <Link key={movie.id} href={`/${movie.id}`}>
+            <div className='w-fit'>
               <div className='relative'>
                 <Image
                   className='rounded-md mb-2 h-52 w-auto md:w-auto md:h-72 lg:h-auto lg:w-full'

@@ -22,11 +22,8 @@ async function SearchResults({ word }) {
       ) : (
         <div className='grid grid-cols-1 mb-28 gap-y-8 lg:mb-0 lg:grid-cols-2 lg:gap-y-10 lg:gap-x-8'>
           {results.map((movie) => (
-            <Link href={"/" + movie.id}>
-              <div
-                key={movie.id}
-                className='relative mr-4 h-[550px] w-full lg:w-[800] overflow-y-scroll pb-2  lg:pb-0 lg:h-96 lg:overflow-y-hidden'
-              >
+            <Link key={movie.id} href={"/" + movie.id}>
+              <div className='relative mr-4 h-[550px] w-full lg:w-[800] overflow-y-scroll pb-2  lg:pb-0 lg:h-96 lg:overflow-y-hidden'>
                 <Image
                   className='relative lg:static object-fit w-full h-full opacity-15'
                   src={IMG_URL + movie.backdrop_path}
