@@ -1,5 +1,4 @@
 import { searchMovies } from "../_utils/requests.js"
-import Image from "next/image"
 import Link from "next/link"
 
 async function SearchResults({ word }) {
@@ -25,22 +24,17 @@ async function SearchResults({ word }) {
           {results.map((movie) => (
             <Link key={movie.id} href={"/" + movie.id}>
               <div className='relative mr-4 h-[550px] w-full lg:w-[800] overflow-y-scroll pb-2  lg:pb-0 lg:h-96 lg:overflow-y-hidden'>
-                <Image
+                <img
                   className='relative lg:static object-fit w-full h-full opacity-15'
                   src={IMG_URL + movie.backdrop_path}
-                  width={200}
-                  height={500}
-                  quality={100}
                   alt={movie.original_title}
                 />
                 <div className='absolute top-0 flex flex-col px-4 pt-4'>
                   <h2 className='text-xl mb-1 '>{movie.original_title}</h2>
                   <div className='flex flex-col lg:flex-row'>
-                    <Image
+                    <img
                       className='mr-2 relative'
                       src={IMG_URL + movie.poster_path}
-                      width={200}
-                      height={500}
                       alt={movie.original_title}
                     />
 

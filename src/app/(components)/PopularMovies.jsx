@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 
 async function PopularMovies({ fetch_func }) {
@@ -12,12 +11,9 @@ async function PopularMovies({ fetch_func }) {
           <Link key={movie.id} href={`/${movie.id}`}>
             <div className='w-fit'>
               <div className='relative'>
-                <Image
+                <img
                   className='rounded-md mb-2 h-52 w-auto md:w-auto md:h-72 lg:h-auto lg:w-full'
                   src={`${img_url}${movie.poster_path}`}
-                  width='0'
-                  height='0'
-                  sizes='100vw'
                   alt={movie.title ? movie.title : movie.name}
                 />
                 <div>

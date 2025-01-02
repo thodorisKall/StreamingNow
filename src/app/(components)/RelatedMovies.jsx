@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import { relatedMoviesList } from "../_utils/requests"
 
@@ -10,11 +9,9 @@ async function RelatedMovies({ id }) {
     <section className='flex flex-col px-4 gap-y-8 mb-16 lg:px-0 lg:flex-row lg:justify-between lg:gap-10'>
       {relatedMvs.slice(0, 5).map((movie) => (
         <Link href={`/${movie.id}`} key={movie.id} className='relative'>
-          <Image
+          <img
             className='w-full object-fit h-auto lg:h-96 mb-2'
             src={`${IMG_URL}${movie.poster_path}`}
-            width={258}
-            height={382}
             alt={movie.original_title}
           />
           <h2 className='text-lg font-semibold'>

@@ -1,6 +1,5 @@
 "use client"
 import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import {
@@ -21,13 +20,10 @@ function Footer() {
   return (
     <footer className='flex flex-col  lg:flex-row  lg:justify-between px-4 lg:px-20  py-16 bg-light_black lg:mt-14'>
       <div className='footer__address'>
-        <Image
+        <img
           className='mb-2 '
           src='/nowStreaming_icon.png'
-          width={200}
-          height={50}
           alt='now streaming website'
-          quality={100}
         />
         <div className='mb-4 lg:mb-8'>
           <h3>West Attica</h3>
